@@ -13,7 +13,7 @@ OcclusionCullingSettings:
 --- !u!104 &2
 RenderSettings:
   m_ObjectHideFlags: 0
-  serializedVersion: 10
+  serializedVersion: 9
   m_Fog: 0
   m_FogColor: {r: 0.5, g: 0.5, b: 0.5, a: 1}
   m_FogMode: 3
@@ -38,12 +38,12 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0, g: 0, b: 0, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 12
+  m_GIWorkflowMode: 1
   m_GISettings:
     serializedVersion: 2
     m_BounceScale: 1
@@ -66,6 +66,9 @@ LightmapSettings:
     m_LightmapParameters: {fileID: 0}
     m_LightmapsBakeMode: 1
     m_TextureCompression: 1
+    m_FinalGather: 0
+    m_FinalGatherFiltering: 1
+    m_FinalGatherRayCount: 256
     m_ReflectionCompression: 2
     m_MixedBakeMode: 2
     m_BakeBackend: 1
@@ -378,6 +381,18 @@ PrefabInstance:
       value: Bubble
       objectReference: {fileID: 0}
     - target: {fileID: 4272973696964329072, guid: cda4c00ec0cdd89468da1c6aa5868a6c, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 0.4
+      objectReference: {fileID: 0}
+    - target: {fileID: 4272973696964329072, guid: cda4c00ec0cdd89468da1c6aa5868a6c, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 0.4
+      objectReference: {fileID: 0}
+    - target: {fileID: 4272973696964329072, guid: cda4c00ec0cdd89468da1c6aa5868a6c, type: 3}
+      propertyPath: m_LocalScale.z
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4272973696964329072, guid: cda4c00ec0cdd89468da1c6aa5868a6c, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0
       objectReference: {fileID: 0}
@@ -417,6 +432,14 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 4272973696964329072, guid: cda4c00ec0cdd89468da1c6aa5868a6c, type: 3}
+      propertyPath: m_ConstrainProportionsScale
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4875404586061898339, guid: cda4c00ec0cdd89468da1c6aa5868a6c, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: c3fd19db8ba86c4419a9233177be34cc, type: 3}
     - target: {fileID: 8353960563230119672, guid: cda4c00ec0cdd89468da1c6aa5868a6c, type: 3}
       propertyPath: manager
       value: 
@@ -940,6 +963,10 @@ PrefabInstance:
     - target: {fileID: 5981528089331283957, guid: d914b3da22dff69469127fba3c655787, type: 3}
       propertyPath: m_Name
       value: Disclaimer
+      objectReference: {fileID: 0}
+    - target: {fileID: 5981528089331283957, guid: d914b3da22dff69469127fba3c655787, type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6104745190915691419, guid: d914b3da22dff69469127fba3c655787, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
