@@ -21,6 +21,14 @@ public class SceneController : MonoBehaviour
     {
         SceneManager.LoadScene("MiniGame01");
     }
+    public void LoadStatusScene()
+    {
+        SceneManager.LoadScene("Status");
+    }
+    public void LoadPostScene()
+    {
+        SceneManager.LoadScene("ChoosePost");
+    }
     public void CloseGame()
     {
         Application.Quit();
