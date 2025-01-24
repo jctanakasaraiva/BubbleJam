@@ -17,4 +17,16 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Minigames/MiniGame03.unity
     guid: 99020e380ddcd6244aa6ff49fb9c97d0
+  - enabled: 1
+    path: Assets/Scenes/ChooseNiche.unity
+    guid: be6f9e9ec28419f419612b7bd448ed35
+  - enabled: 1
+    path: Assets/Scenes/ChoosePost.unity
+    guid: acf0124632a49f74f9721e8dd4da06d8
+  - enabled: 1
+    path: Assets/Scenes/GameOver.unity
+    guid: 3118154330ec551458c247f2b7811ae1
+  - enabled: 1
+    path: Assets/Scenes/Status.unity
+    guid: df0cf3c3472713f4ca5d10670afe010f
   m_configObjects: {}
