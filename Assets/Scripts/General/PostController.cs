@@ -10,6 +10,12 @@ public class PostController : MonoBehaviour
     public TMP_Text displayText;
 
     int categoria1 = 0, categoria2 = 0;
+    private float[,] matriz = new float[,]
+       {
+            { 1.0f, 0.75f, 0.5f },
+            { 0.75f, 1.0f, 0.5f },
+            { 0.5f, 0.75f, 1.0f }
+       };
 
     void Start()
     {
@@ -92,27 +98,37 @@ public class PostController : MonoBehaviour
         //Debug.Log("Ação 2: " + acao2);
         button1.text = acao1;
         button2.text = acao2;
-        //GetCalculatedInfluence();
+
     }
 
     public void getCategoryOne()
     {
-        PlayerPrefs.SetInt("category", categoria1);
+        PlayerPrefs.SetFloat("multiply", matriz[PlayerPrefs.GetInt("Niche"), categoria1]);
+        //Debug.Log("Multiplicador: " + matriz[PlayerPrefs.GetInt("Niche"), categoria1]);
         PlayerPrefs.Save();
+
     }
     public void getCategoryTwo()
     {
-        PlayerPrefs.SetInt("category", categoria2);
+        PlayerPrefs.SetFloat("multiply", matriz[PlayerPrefs.GetInt("Niche"), categoria2]);
+        //Debug.Log("Multiplicador: " + matriz[PlayerPrefs.GetInt("Niche"), categoria2]);
         PlayerPrefs.Save();
     }
-    /*
+    
     public void GetCalculatedInfluence()
      {
+        /*
         string lastButtonClicked = PlayerPrefs.GetString("NichePlayer", "Nenhum botão foi clicado");
         displayText.text = "Seu nicho é: " + lastButtonClicked;
-       
-
+        Debug.Log("Categoria 1:: " + categoria1);
+        Debug.Log("Categoria 2: " + categoria2);
+        Debug.Log("Nome Nicho: " + PlayerPrefs.GetString("NicheName"));
+        Debug.Log("Nicho PLayer: " + PlayerPrefs.GetInt("Niche"));
+        Debug.Log("Ação 1: " + PlayerPrefs.GetInt("contLifes"));
+        Debug.Log("Ação 1: " + PlayerPrefs.GetInt("influenceLevel"));
+        Debug.Log("Ação 1: " + PlayerPrefs.GetInt("followers"));
+        */
     }
-    */
+    
 
 }

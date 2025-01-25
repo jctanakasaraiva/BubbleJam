@@ -3945,7 +3945,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6832312860485256475, guid: 1658c8affc9673b44b8fbdb95a054144, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_StringArgument
-      value: MiniGame01
+      value: Status
       objectReference: {fileID: 0}
     - target: {fileID: 6832312860485256475, guid: 1658c8affc9673b44b8fbdb95a054144, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
@@ -6014,7 +6014,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4550505304210519025, guid: 2a39440380179e545b18dec01e511e7b, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_StringArgument
-      value: MiniGame01
+      value: Status
       objectReference: {fileID: 0}
     - target: {fileID: 4550505304210519025, guid: 2a39440380179e545b18dec01e511e7b, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
@@ -6023,6 +6023,10 @@ PrefabInstance:
     - target: {fileID: 6816682882117895437, guid: 2a39440380179e545b18dec01e511e7b, type: 3}
       propertyPath: m_Name
       value: LoseScreen
+      objectReference: {fileID: 0}
+    - target: {fileID: 6816682882117895437, guid: 2a39440380179e545b18dec01e511e7b, type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []

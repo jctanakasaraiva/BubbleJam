@@ -49,6 +49,11 @@ public class ManagerMinigames : MonoBehaviour {
     public void Lose() {
         Runnig = false;
         loseScr.SetActive(true);
+        PlayerPrefs.SetInt("contLifes", PlayerPrefs.GetInt("contLifes")+1);;
+        if (PlayerPrefs.GetInt("contLifes")>2)
+        {
+            SceneManager.LoadScene("GameOver");
+        }
     }
 
     public void ChangeScene(string sceneName) {

@@ -5,21 +5,10 @@ using UnityEngine.SceneManagement;
 
 public class SceneController : MonoBehaviour
 {
-    private float[,] matriz = new float[,]
-       {
-            { 1.0f, 0.75f, 0.5f },
-            { 0.75f, 1.0f, 0.5f },
-            { 0.5f, 0.75f, 1.0f }
-       };
-    public void StartGame()
-    {
-        SceneManager.LoadScene("ChooseNiche");
-        //Time.timeScale = 1f;
-        //SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
-    }
+      
     public void ChoosePostScene(string buttonName)
     {
-        PlayerPrefs.SetString("NichePlayer", buttonName);
+        PlayerPrefs.SetString("NicheName", buttonName);
         switch (buttonName)
         {
             case "Gamer":
@@ -35,14 +24,12 @@ public class SceneController : MonoBehaviour
        
         PlayerPrefs.SetInt("contLifes", 0);
         PlayerPrefs.SetInt("influenceLevel", 0);
+        PlayerPrefs.SetInt("followers", 0);
         PlayerPrefs.Save();
         SceneManager.LoadScene("ChoosePost");
     }
-    public void LoadMinigame(int getClickedOption)
-    {
-        float weightNiche;
-        weightNiche = matriz[PlayerPrefs.GetInt("Niche"), PlayerPrefs.GetInt("category")];
-        PlayerPrefs.SetFloat("weightNiche", weightNiche);
+    public void LoadMinigame()
+    {   
         switch (Random.Range(0, 3)) {
             case 0:
                 SceneManager.LoadScene("MiniGame01");
