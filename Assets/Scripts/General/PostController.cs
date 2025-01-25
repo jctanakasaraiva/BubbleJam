@@ -8,10 +8,14 @@ public class PostController : MonoBehaviour
     public TextMeshProUGUI button1;
     public TextMeshProUGUI button2;
     public TMP_Text displayText;
+
+    int categoria1 = 0, categoria2 = 0;
+
     void Start()
     {
+
         string[] gravarActions = {
-            "Gravar game play Arcade",
+            "Gravar game play Arcade","3",
             "Gravar game play Corrida",
             "Gravar game play Puzzle",
             "Gravar game play Terror",
@@ -46,32 +50,33 @@ public class PostController : MonoBehaviour
             "Treinar Flexão de braços",
             "Treinar Rosca Direta"
         };
-        (string, string) GetRandomAction()
+        (string, int) GetRandomAction()
         {
             int randomCategory = UnityEngine.Random.Range(0, 3);
             string action = "";
-            string category = "";
+            int category = 0;
 
             switch (randomCategory)
             {
                 case 0:
                     action = gravarActions[UnityEngine.Random.Range(0, gravarActions.Length)];
-                    category = "Gravar";
+                    category = 0;
+
                     break;
                 case 1:
                     action = prepararActions[UnityEngine.Random.Range(0, prepararActions.Length)];
-                    category = "Preparar";
+                    category = 1;
                     break;
                 case 2:
                     action = treinarActions[UnityEngine.Random.Range(0, treinarActions.Length)];
-                    category = "Treinar";
+                    category = 2;
                     break;
             }
             return (action, category);
         }
 
         string acao1 = "", acao2 = "";
-        string categoria1 = "", categoria2 = "";
+        
 
 
         (acao1, categoria1) = GetRandomAction();
@@ -87,24 +92,27 @@ public class PostController : MonoBehaviour
         //Debug.Log("Ação 2: " + acao2);
         button1.text = acao1;
         button2.text = acao2;
-        GetCalculatedInfluence();
+        //GetCalculatedInfluence();
     }
 
-    
+    public void getCategoryOne()
+    {
+        PlayerPrefs.SetInt("category", categoria1);
+        PlayerPrefs.Save();
+    }
+    public void getCategoryTwo()
+    {
+        PlayerPrefs.SetInt("category", categoria2);
+        PlayerPrefs.Save();
+    }
+    /*
     public void GetCalculatedInfluence()
      {
         string lastButtonClicked = PlayerPrefs.GetString("NichePlayer", "Nenhum botão foi clicado");
         displayText.text = "Seu nicho é: " + lastButtonClicked;
-        switch (lastButtonClicked)
-        {
-            case "Gamer":
-                displayText.text = "Case gamer " + lastButtonClicked;
-                break;
-            case "Culinaria":
-                break;
-            case "Fitness":
-                break;
-        }
+       
+
     }
-    
+    */
+
 }

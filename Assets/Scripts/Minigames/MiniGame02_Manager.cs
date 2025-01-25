@@ -87,8 +87,8 @@ public class MiniGame02_Manager : MonoBehaviour {
                 Lose();
             }
 
-            transform.position = Vector2.MoveTowards(transform.position, nextPosition, soapSpeed * Time.deltaTime);
-            if(transform.position.x == nextPosition.x) {
+            transform.position = Vector3.MoveTowards(transform.position, nextPosition, soapSpeed * Time.deltaTime);
+            if(new Vector2(transform.position.x, transform.position.y) == new Vector2(nextPosition.x, nextPosition.y) s) {
                 nextPosition = (nextPosition.x == pointA.position.x) ? pointB.position : pointA.position;
             }
 
