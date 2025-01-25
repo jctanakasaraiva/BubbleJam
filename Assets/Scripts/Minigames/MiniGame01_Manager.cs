@@ -17,6 +17,7 @@ public class MiniGame01_Manager : MonoBehaviour {
     ArrayList bubblesList;
 
     private ManagerMinigames manager;
+    public int countTouch = 0;
 
     private void Awake() {
 
@@ -75,6 +76,11 @@ public class MiniGame01_Manager : MonoBehaviour {
 
             Rigidbody2D rbBubble = col.GetComponent<Rigidbody2D>();
             rbBubble.AddForce(newDirection * bForca);
+            countTouch++;
+        }
+        if(countTouch > 4)
+        {
+            manager.Win();
         }
     }
 

@@ -58,7 +58,7 @@ public class PostController : MonoBehaviour
         };
         (string, int) GetRandomAction()
         {
-            int randomCategory = UnityEngine.Random.Range(0, 3);
+            int randomCategory = UnityEngine.Random.Range(0, 2);
             string action = "";
             int category = 0;
 

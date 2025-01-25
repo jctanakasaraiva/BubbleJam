@@ -9683,6 +9683,7 @@ MonoBehaviour:
   - {fileID: 2055717237}
   bubble: {fileID: 1400551205076397265, guid: cda4c00ec0cdd89468da1c6aa5868a6c, type: 3}
   plataforma: {fileID: 2055286004}
+  countTouch: 0
 --- !u!114 &2055286010
 MonoBehaviour:
   m_ObjectHideFlags: 0
