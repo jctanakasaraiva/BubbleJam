@@ -15,6 +15,9 @@ public class MiniGame02_Manager : MonoBehaviour {
     public GameObject target;
     public GameObject bubble;
     public GameObject explosion;
+    public GameObject mouse;
+
+    public ParticleSystem explosionParticle;
 
     float levelFactor = 1f;
     bool clicavel = true;
@@ -46,7 +49,7 @@ public class MiniGame02_Manager : MonoBehaviour {
                 levelFactor = 1.25f;
                 break;
             default:
-                Debug.Log("Ué");
+                Debug.Log("UÃ©");
                 break;
         }
 
@@ -73,10 +76,12 @@ public class MiniGame02_Manager : MonoBehaviour {
                         clicavel = false;
 
                         if (newScale.x > 3) loseFlag = true;
+                        BubbleSpawn();
                     }
                 }
                 else {
                     newScale /= 1 + 1/levelFactor;
+
                 }
             }
 
@@ -121,5 +126,11 @@ public class MiniGame02_Manager : MonoBehaviour {
     void Lose() {
         Debug.Log("Perdeu!");
         manager.Lose();
+    }
+
+    private void BubbleSpawn()
+    {
+        explosion.SetActive(true);
+        explosionParticle.Play();
     }
 }
