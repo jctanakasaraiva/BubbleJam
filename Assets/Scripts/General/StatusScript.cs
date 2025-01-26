@@ -38,7 +38,7 @@ public class StatusScript : MonoBehaviour
 
         Debug.Log("InfluenceLevel: " + influenceLevel);  // Verifique se o valor é 85 aqui
 
-        if (influenceLevel >= 30)
+        if (influenceLevel >= 200)
         {
             SceneManager.LoadScene("Congrats");
             return;
