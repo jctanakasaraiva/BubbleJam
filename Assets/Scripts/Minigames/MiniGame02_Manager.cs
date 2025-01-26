@@ -30,6 +30,9 @@ public class MiniGame02_Manager : MonoBehaviour {
 
     private ManagerMinigames manager;
 
+    public AudioSource bubblesSound;
+    public AudioClip clip;
+
     private void Awake() {
 
         switch (Dificuldade) {
@@ -77,6 +80,7 @@ public class MiniGame02_Manager : MonoBehaviour {
 
                         if (newScale.x > 3) loseFlag = true;
                         BubbleSpawn();
+                        bubblesSound.PlayOneShot(clip, 1f);
                     }
                 }
                 else {
