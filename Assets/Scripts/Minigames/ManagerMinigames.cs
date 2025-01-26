@@ -80,6 +80,7 @@ public class ManagerMinigames : MonoBehaviour {
         {
             SceneManager.LoadScene("GameOver");
         }
+        AudioFXController.Instance.DeathSound();
     }
 
     public void ChangeScene(string sceneName) {

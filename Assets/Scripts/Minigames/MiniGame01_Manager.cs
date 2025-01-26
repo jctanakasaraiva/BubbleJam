@@ -73,10 +73,12 @@ public class MiniGame01_Manager : MonoBehaviour {
             Vector2 newDirection = col.transform.position - transform.position;
             newDirection = newDirection.normalized;
             newDirection = new Vector2(newDirection.x/2, newDirection.y);
-
             Rigidbody2D rbBubble = col.GetComponent<Rigidbody2D>();
             rbBubble.AddForce(newDirection * bForca);
+            
             countTouch++;
+
+            AudioFXController.Instance.CollisionSound();
         }
         if(countTouch > 4)
         {

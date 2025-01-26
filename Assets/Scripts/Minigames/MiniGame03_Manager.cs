@@ -78,6 +78,7 @@ public class MiniGame03_Manager : MonoBehaviour {
             //Move a bolha para cima ao clicar
             if (Input.GetMouseButtonDown(0)) {
                 bubble.GetComponent<Rigidbody2D>().AddForce(Vector2.up * bForce);
+                AudioFXController.Instance.CollisionSound();
             }
 
             //Adiciona velocidade aos espetos

@@ -103,6 +103,7 @@ public class MiniGame02_Manager : MonoBehaviour {
 
             //Escala a bolha
             bubble.transform.localScale = Vector2.Lerp(bubble.transform.localScale, newScale, .1f);
+
         }
     }
 
@@ -110,6 +111,7 @@ public class MiniGame02_Manager : MonoBehaviour {
         if (collision.gameObject.name == target.name) {
             taNoTarget = true;
             clicavel = true;
+            AudioFXController.Instance.CollisionSound();
         }
     }
 
