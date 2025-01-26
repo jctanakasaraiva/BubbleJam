@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: ea4f8d7dccfc8e9418a00b2e3cdac88d
+guid: 7e9b554c153b9764e8df2aec11ca1137
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -49,7 +49,7 @@ TextureImporter:
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
   spritePixelsToUnits: 100
-  spriteBorder: {x: 27, y: 328, z: 1348, w: 66}
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
   alphaIsTransparency: 1
@@ -69,7 +69,7 @@ TextureImporter:
   platformSettings:
   - serializedVersion: 3
     buildTarget: DefaultTexturePlatform
-    maxTextureSize: 512
+    maxTextureSize: 2048
     resizeAlgorithm: 0
     textureFormat: -1
     textureCompression: 1
@@ -93,107 +93,131 @@ TextureImporter:
     ignorePlatformSupport: 0
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
-  - serializedVersion: 3
-    buildTarget: Android
-    maxTextureSize: 2048
-    resizeAlgorithm: 0
-    textureFormat: -1
-    textureCompression: 1
-    compressionQuality: 50
-    crunchedCompression: 0
-    allowsAlphaSplitting: 0
-    overridden: 0
-    ignorePlatformSupport: 0
-    androidETC2FallbackOverride: 0
-    forceMaximumCompressionQuality_BC6H_BC7: 0
-  - serializedVersion: 3
-    buildTarget: Windows Store Apps
-    maxTextureSize: 2048
-    resizeAlgorithm: 0
-    textureFormat: -1
-    textureCompression: 1
-    compressionQuality: 50
-    crunchedCompression: 0
-    allowsAlphaSplitting: 0
-    overridden: 0
-    ignorePlatformSupport: 0
-    androidETC2FallbackOverride: 0
-    forceMaximumCompressionQuality_BC6H_BC7: 0
-  - serializedVersion: 3
-    buildTarget: WebGL
-    maxTextureSize: 2048
-    resizeAlgorithm: 0
-    textureFormat: -1
-    textureCompression: 1
-    compressionQuality: 50
-    crunchedCompression: 0
-    allowsAlphaSplitting: 0
-    overridden: 0
-    ignorePlatformSupport: 0
-    androidETC2FallbackOverride: 0
-    forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: HappyFace_0
+      name: Buttons_0
       rect:
         serializedVersion: 2
-        x: 108
-        y: 330
-        width: 36
-        height: 102
+        x: 46
+        y: 336
+        width: 209
+        height: 139
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
+      pivot: {x: 0, y: 0}
+      border: {x: 82, y: 68, z: 83, w: 63}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 3da469db450726347a1c92e1dd058649
-      internalID: -1713048451
+      spriteID: 14e0948cd8447fc43a983dff37605c48
+      internalID: -1004042636
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: HappyFace_1
+      name: Buttons_1
       rect:
         serializedVersion: 2
-        x: 26
-        y: 211
-        width: 210
-        height: 106
+        x: 301
+        y: 355
+        width: 101
+        height: 101
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: fda7aa67406f2924c917c3a9ad71e6de
-      internalID: -1477739055
+      spriteID: c773560232f35de4ca2943993e27111b
+      internalID: 569492768
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: btns
+      name: Buttons_2
       rect:
         serializedVersion: 2
-        x: 19
-        y: 92
-        width: 217
-        height: 104
+        x: 46
+        y: 181
+        width: 209
+        height: 72
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 5, y: 0, z: 0, w: 0}
+      pivot: {x: 0, y: 0}
+      border: {x: 84, y: 66, z: 85, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: d252a373e7afeda409d6a3c4cbee282f
-      internalID: 720945571
+      spriteID: 10960b1d64b469147bc045fd744dd3da
+      internalID: 524892511
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Buttons_3
+      rect:
+        serializedVersion: 2
+        x: 301
+        y: 200
+        width: 101
+        height: 100
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a845fc91be022194b8dad6b8e73f8a0e
+      internalID: -65002184
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Buttons_4
+      rect:
+        serializedVersion: 2
+        x: 46
+        y: 25
+        width: 209
+        height: 74
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 79, y: 67, z: 82, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6f4b1b07aedbd194798c4c540055f8b1
+      internalID: -1997392009
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Buttons_5
+      rect:
+        serializedVersion: 2
+        x: 301
+        y: 44
+        width: 101
+        height: 101
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 027ed5322676ef7448fa4db907b8c48f
+      internalID: -329670986
       vertices: []
       indices: 
       edges: []
@@ -202,16 +226,19 @@ TextureImporter:
     physicsShape: []
     bones: []
     spriteID: 5e97eb03825dee720800000000000000
-    internalID: 1537655665
+    internalID: 0
     vertices: []
     indices: 
     edges: []
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      HappyFace_0: -1713048451
-      HappyFace_1: -1477739055
-      btns: 720945571
+      Buttons_0: -1004042636
+      Buttons_1: 569492768
+      Buttons_2: 524892511
+      Buttons_3: -65002184
+      Buttons_4: -1997392009
+      Buttons_5: -329670986
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
