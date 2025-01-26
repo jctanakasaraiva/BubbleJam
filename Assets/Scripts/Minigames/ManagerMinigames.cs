@@ -26,11 +26,11 @@ public class ManagerMinigames : MonoBehaviour {
     }
 
     private void Update() {
-        if ( (Input.GetKeyDown(KeyCode.P) | Input.GetKeyDown(KeyCode.Escape)) & Runnig )
+        if ( (Input.GetKeyDown(KeyCode.P) | Input.GetKeyDown(KeyCode.Escape)) & Running )
             Pause();
     }
 
-    public bool Runnig {
+    public bool Running {
         get { return running; }
         set { running = value; }
     }
@@ -38,20 +38,24 @@ public class ManagerMinigames : MonoBehaviour {
     public void Play() {
         pauseScr.SetActive(false);
         disclaimer.SetActive(false);
-        Runnig = true;
+        running = true;
         Time.timeScale = 1f;
     }
 
     public void Win() {
-        Runnig = false;
-        winScr.SetActive(true);
+        if (running) {
+            running = false;
+            winScr.SetActive(true);
+        }
     }
 
     public void Lose() {
-        Runnig = false;
-        loseScr.SetActive(true);
-        
-        AudioFXController.Instance.DeathSound();
+        if (running) {
+            running = false;
+            loseScr.SetActive(true);
+
+            AudioFXController.Instance.DeathSound();
+        }
     }
 
     public void ChangeScene(string sceneName) {
@@ -60,7 +64,7 @@ public class ManagerMinigames : MonoBehaviour {
 
     public void Pause() {
         Time.timeScale = 0f;
-        Runnig = false;
+        running = false;
         pauseScr.SetActive(true);
     }
 

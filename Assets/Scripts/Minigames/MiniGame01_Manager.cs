@@ -20,6 +20,7 @@ public class MiniGame01_Manager : MonoBehaviour {
     public int countTouch = 0;
 
     private void Awake() {
+        bubblesList = new ArrayList();
 
         switch (Dificuldade) {
             case levels.Level_1:
@@ -56,11 +57,10 @@ public class MiniGame01_Manager : MonoBehaviour {
 
     private void Start() {
         manager = this.gameObject.GetComponent<ManagerMinigames>();
-        bubblesList = new ArrayList();
     }
 
     void Update() {
-        if (manager.Runnig) {
+        if (manager.Running) {
 
             float newPosition = Camera.main.ScreenToWorldPoint(Input.mousePosition).x;
             newPosition = Mathf.Clamp(newPosition, -Screen.height, Screen.height);
@@ -80,23 +80,23 @@ public class MiniGame01_Manager : MonoBehaviour {
 
             AudioFXController.Instance.CollisionSound();
         }
-        if(countTouch >= 4)
-        {
-            manager.Win();
+
+        if(countTouch >= 4) {
+            Win();
         }
     }
 
     void SpawnBubble(Transform posT, float gS) {
         GameObject _bubble = Instantiate(bubble, posT) as GameObject;
         _bubble.GetComponent<Rigidbody2D>().gravityScale = gS;
-        //bubblesList.Add(_bubble);
+        bubblesList.Add(_bubble);
     }
 
     void Win() {
         Debug.Log("Venceu!");
-        //foreach (GameObject b in bubblesList) {
-        //    b.SetActive(false);
-        //}
+        foreach (GameObject b in bubblesList) {
+            b.SetActive(false);
+        }
         manager.Win();
     }
 }

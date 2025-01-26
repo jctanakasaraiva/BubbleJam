@@ -60,7 +60,7 @@ public class MiniGame03_Manager : MonoBehaviour {
     }
 
     private void Update() {
-        if (manager.Runnig) {
+        if (manager.Running) {
             //Conta os espetos spawnados
             if (count > 0) {
                 //Condicional de tempo

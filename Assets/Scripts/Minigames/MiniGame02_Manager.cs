@@ -70,7 +70,7 @@ public class MiniGame02_Manager : MonoBehaviour {
     }
 
     private void Update() {
-        if (manager.Runnig) {
+        if (manager.Running) {
 
             if (Input.GetMouseButtonDown(0)) {
                 if (taNoTarget) {
@@ -89,7 +89,7 @@ public class MiniGame02_Manager : MonoBehaviour {
                 }
             }
 
-            if (newScale.x > 15) {
+            if (newScale.x > 9) {
                 Win();
             }
             else if ((newScale.x < 3 & loseFlag) || newScale.x < 0.5f) {
