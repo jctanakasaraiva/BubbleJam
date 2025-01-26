@@ -72,7 +72,7 @@ public class MiniGame01_Manager : MonoBehaviour {
         if (col.gameObject.CompareTag("Bolha")) {
             Vector2 newDirection = col.transform.position - transform.position;
             newDirection = newDirection.normalized;
-            newDirection = new Vector2(newDirection.x/2, newDirection.y);
+            newDirection = new Vector2(newDirection.x*2, newDirection.y);
             Rigidbody2D rbBubble = col.GetComponent<Rigidbody2D>();
             rbBubble.AddForce(newDirection * bForca);
             
@@ -80,7 +80,7 @@ public class MiniGame01_Manager : MonoBehaviour {
 
             AudioFXController.Instance.CollisionSound();
         }
-        if(countTouch > 4)
+        if(countTouch >= 4)
         {
             manager.Win();
         }
