@@ -11,17 +11,12 @@ public class StatusScript : MonoBehaviour
     public GameObject sizeBubble;
     void Awake()
     {
-        textFollowers.text = "Seguidores: "+PlayerPrefs.GetInt("followers");
-        textInfluence.text = "Influencia: "+PlayerPrefs.GetFloat("influenceLevel") + "%";
-
+        textFollowers.text = "Seguidores: " + PlayerPrefs.GetInt("followers");
+        textInfluence.text = "Influencia: " + PlayerPrefs.GetFloat("influenceLevel") + "%";
 
         float influenceLevel = PlayerPrefs.GetFloat("influenceLevel");
-        if (influenceLevel >= 100)
-        {
-            //SceneManager.LoadScene("Venceu");
-            //return;  Garantir que o restante do código não será executado após a vitória
-        }
 
+ 
         float size = 2f;
         if (influenceLevel >= 80)
         {
@@ -40,7 +35,13 @@ public class StatusScript : MonoBehaviour
             size = 3f;
         }
         sizeBubble.transform.localScale = new Vector3(size, size, size);
-    }
 
-   
+        Debug.Log("InfluenceLevel: " + influenceLevel);  // Verifique se o valor é 85 aqui
+
+        if (influenceLevel >= 30)
+        {
+            SceneManager.LoadScene("Congrats");
+            return;
+        }
+    }
 }

@@ -9,6 +9,9 @@ EditorBuildSettings:
     path: Assets/Scenes/SampleScene.unity
     guid: 8c9cfa26abfee488c85f1582747f6a02
   - enabled: 1
+    path: Assets/Scenes/Start.unity
+    guid: 4174c207c947fb34ba4d7ae66b23880d
+  - enabled: 1
     path: Assets/Scenes/Minigames/MiniGame01.unity
     guid: 39fa3daf9ac9915439af7c30f458f508
   - enabled: 1
@@ -30,6 +33,6 @@ EditorBuildSettings:
     path: Assets/Scenes/Status.unity
     guid: df0cf3c3472713f4ca5d10670afe010f
   - enabled: 1
-    path: Assets/Scenes/Start.unity
-    guid: 4174c207c947fb34ba4d7ae66b23880d
+    path: Assets/Scenes/Congrats.unity
+    guid: 83d225f2849008f4baac7f77dea37d26
   m_configObjects: {}

@@ -54,11 +54,13 @@ public class ManagerMinigames : MonoBehaviour {
         {
             SceneManager.LoadScene("GameOver");
         }
+        /*
         if(PlayerPrefs.GetFloat("influenceLevel") > 100)
         {
             SceneManager.LoadScene("Status");
             //vencer
         }
+        */
     }
 
     public void Lose() {
@@ -68,6 +70,7 @@ public class ManagerMinigames : MonoBehaviour {
 
         PlayerPrefs.SetInt("followers", PlayerPrefs.GetInt("followers") - 10);
         PlayerPrefs.SetFloat("influenceLevel", PlayerPrefs.GetFloat("influenceLevel")-5);
+        PlayerPrefs.Save();
         if (PlayerPrefs.GetInt("contLifes")>2)
         {
             SceneManager.LoadScene("GameOver");

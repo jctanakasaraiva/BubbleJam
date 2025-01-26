@@ -21,7 +21,7 @@ public class PostController : MonoBehaviour
     {
 
         string[] gravarActions = {
-            "Gravar game play Arcade","3",
+            "Gravar game play Arcade",
             "Gravar game play Corrida",
             "Gravar game play Puzzle",
             "Gravar game play Terror",
@@ -58,7 +58,7 @@ public class PostController : MonoBehaviour
         };
         (string, int) GetRandomAction()
         {
-            int randomCategory = UnityEngine.Random.Range(0, 2);
+            int randomCategory = UnityEngine.Random.Range(0, 3);
             string action = "";
             int category = 0;
 
