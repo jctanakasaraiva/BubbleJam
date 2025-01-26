@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 //using UnityEditor.Experimental.GraphView;
 using UnityEngine;
+using TMPro;
 
 public class MiniGame03_Manager : MonoBehaviour {
 
@@ -20,6 +21,8 @@ public class MiniGame03_Manager : MonoBehaviour {
     float levelFactor = 1f;
     float currentTime;
     ArrayList espetosList;
+
+    public TextMeshProUGUI disclaimerText;
 
     private ManagerMinigames manager;
 
@@ -42,9 +45,11 @@ public class MiniGame03_Manager : MonoBehaviour {
                 levelFactor = 3f;
                 break;
             default:
-                Debug.Log("Ué");
+                Debug.Log("UÃ©");
                 break;
         }
+
+        disclaimerText.text = "Clique com o mouse para mover a bolha para cima e evite " + count + " espinhos para ganhar!";
     }
 
     private void Start() {
@@ -61,7 +66,9 @@ public class MiniGame03_Manager : MonoBehaviour {
                 //Condicional de tempo
                 if (currentTime <= 0f) {
                     //Spawn os espetos
-                    espetosList.Add(Instantiate(espetos, espetosSpawn.transform) as GameObject);
+                    var y = Random.Range(-2, 2);
+                    var spawnTransform = new Vector3(espetosSpawn.transform.position.x, y, 0);
+                    espetosList.Add(Instantiate(espetos, spawnTransform, Quaternion.identity) as GameObject);
                     currentTime = timeSpawn;
                     count--;
                 }
@@ -81,7 +88,7 @@ public class MiniGame03_Manager : MonoBehaviour {
             currentTime -= Time.deltaTime;
         } else
             foreach (GameObject e in espetosList) {
-                //Pára os espetos se o jogo não estiver rodando
+                //PÃ¡ra os espetos se o jogo nÃ£o estiver rodando
                 e.GetComponent<Rigidbody2D>().velocity = new Vector2(0f, 0f);
             }
     }
