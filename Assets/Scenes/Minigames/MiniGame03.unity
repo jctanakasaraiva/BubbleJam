@@ -398,6 +398,18 @@ PrefabInstance:
       propertyPath: m_Constraints
       value: 5
       objectReference: {fileID: 0}
+    - target: {fileID: 542898986159832552, guid: cda4c00ec0cdd89468da1c6aa5868a6c, type: 3}
+      propertyPath: m_Radius
+      value: 0.5390557
+      objectReference: {fileID: 0}
+    - target: {fileID: 542898986159832552, guid: cda4c00ec0cdd89468da1c6aa5868a6c, type: 3}
+      propertyPath: m_Offset.x
+      value: 0.0015224814
+      objectReference: {fileID: 0}
+    - target: {fileID: 542898986159832552, guid: cda4c00ec0cdd89468da1c6aa5868a6c, type: 3}
+      propertyPath: m_Offset.y
+      value: 0.0023720264
+      objectReference: {fileID: 0}
     - target: {fileID: 1400551205076397265, guid: cda4c00ec0cdd89468da1c6aa5868a6c, type: 3}
       propertyPath: m_Name
       value: Bubble
