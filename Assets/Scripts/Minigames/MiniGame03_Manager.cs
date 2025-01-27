@@ -22,8 +22,6 @@ public class MiniGame03_Manager : MonoBehaviour {
     float currentTime;
     ArrayList espetosList;
 
-    public TextMeshProUGUI disclaimerText;
-
     private ManagerMinigames manager;
 
     private void Awake() {
@@ -48,8 +46,6 @@ public class MiniGame03_Manager : MonoBehaviour {
                 Debug.Log("Ué");
                 break;
         }
-
-        disclaimerText.text = "Clique com o mouse para mover a bolha para cima e evite " + count + " espinhos para ganhar!";
     }
 
     private void Start() {

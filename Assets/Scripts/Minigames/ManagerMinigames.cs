@@ -89,12 +89,13 @@ public class ManagerMinigames : MonoBehaviour {
         PlayerPrefs.SetInt("followers", PlayerPrefs.GetInt("followers") - 10);
         PlayerPrefs.SetFloat("influenceLevel", PlayerPrefs.GetFloat("influenceLevel") - 5);
         PlayerPrefs.Save();
+
         if (PlayerPrefs.GetInt("contLifes") > 2) {
             SceneManager.LoadScene("GameOver");
-        }
 
-        if (PlayerPrefs.GetFloat("influenceLevel") < 0 || PlayerPrefs.GetInt("followers") < 0) {
-            SceneManager.LoadScene("GameOver");
-        }
+            if (PlayerPrefs.GetFloat("influenceLevel") < 0 || PlayerPrefs.GetInt("followers") < 0)
+                SceneManager.LoadScene("GameOver");
+
+        } else SceneManager.LoadScene("Status");
     }
 }

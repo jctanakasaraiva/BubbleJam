@@ -10,7 +10,7 @@ public class MiniGame02_Manager : MonoBehaviour {
 
     public Transform pointA;
     public Transform pointB;
-    private float soapSpeed = 5f;
+    private float soapSpeed = 4f;
 
     public GameObject target;
     public GameObject bubble;
@@ -89,7 +89,7 @@ public class MiniGame02_Manager : MonoBehaviour {
                 }
             }
 
-            if (newScale.x > 9) {
+            if (newScale.x > 5) {
                 Win();
             }
             else if ((newScale.x < 3 & loseFlag) || newScale.x < 0.5f) {

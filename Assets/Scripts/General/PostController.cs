@@ -9,6 +9,11 @@ public class PostController : MonoBehaviour
     public TextMeshProUGUI button2;
     public TMP_Text displayText;
 
+    public Sprite[] nichosSprites;
+    public RuntimeAnimatorController[] iconAnim;
+    public GameObject opt1Icon;
+    public GameObject opt2Icon;
+
     int categoria1 = 0, categoria2 = 0;
     private float[,] matriz = new float[,]
        {
@@ -99,6 +104,10 @@ public class PostController : MonoBehaviour
         button1.text = acao1;
         button2.text = acao2;
 
+        opt1Icon.GetComponent<Image>().sprite = nichosSprites[categoria1];
+        opt1Icon.GetComponent<Animator>().runtimeAnimatorController = iconAnim[categoria1] as RuntimeAnimatorController;
+        opt2Icon.GetComponent<Image>().sprite = nichosSprites[categoria2];
+        opt2Icon.GetComponent<Animator>().runtimeAnimatorController = iconAnim[categoria2] as RuntimeAnimatorController;
     }
 
     public void getCategoryOne()

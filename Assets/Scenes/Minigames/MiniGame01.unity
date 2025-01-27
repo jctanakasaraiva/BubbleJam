@@ -7353,7 +7353,8 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 309943537601437252, guid: d914b3da22dff69469127fba3c655787, type: 3}
       propertyPath: m_text
-      value: Use o mouse para mover a barra e evitar que as bolhas caiam nos espinhos
+      value: Use o mouse para mover o ventilador e evitar que a(s) bolha(s) caia(m)
+        nos espinhos
       objectReference: {fileID: 0}
     - target: {fileID: 5981528089331283957, guid: d914b3da22dff69469127fba3c655787, type: 3}
       propertyPath: m_Name
